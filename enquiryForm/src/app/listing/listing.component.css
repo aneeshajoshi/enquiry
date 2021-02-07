@@ -1,0 +1,12 @@
+.content-table{
+    align-content: center;
+    margin-top: 10%;
+   font-weight: bolder;
+   color: snow;
+}
+.background-image{
+    background: url("/assets/contact-us.jpg");
+    background-repeat:initial;
+    background-size: 100% 100%;
+    background-position:center
+}

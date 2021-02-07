@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Enquiry</title>
+</head>
+
+<body>
+    <div>
+
+        <body class="text-center">
+            <div class="background-image"></div>
+            <div class="container ">
+                <div class="jumbotron">
+                    <form [formGroup]="details" (ngSubmit)="detail()">
+                        <h1 class="font-weight-normal">Contact Us</h1>
+                        <div class="form-group">
+                            <div class="mb-3">
+                                <label for="Name"></label><br>
+                                <input formControlName="name" name="name" type="text" class="form-control" id="user"
+                                    placeholder="Name">
+                                <div *ngIf="details.get('name')?.touched && details.get('name')?.errors">
+                                    <label *ngIf="details.get('name')?.errors?.required"> Invalid</label>
+                                    <label *ngIf="details.get('name')?.errors?.pattern"> Not In Correct
+                                        Format</label><br>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label"></label>
+                                <input formControlName="email" name="email" type="text" class="form-control" id="email"
+                                    placeholder="Email">
+                                <div *ngIf="details.get('email')?.touched && details.get('email')?.errors">
+                                    <label *ngIf="details.get('email')?.errors?.required"> Invalid</label>
+                                    <label *ngIf="details.get('email')?.errors?.email">Invalid Email </label>
+                                    <label *ngIf="details.get('email')?.errors?.pattern"> Not In Correct
+                                        Format</label><br>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Name"></label><br>
+                                <input formControlName="subject" name="subject" type="text" class="form-control"
+                                    id="sub" placeholder="subject">
+                                <div *ngIf="details.get('name')?.touched && details.get('subject')?.errors">
+                                    <label *ngIf="details.get('name')?.errors?.required">Invalid</label>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="form-floating">
+                                <label for="floatingTextarea2"></label>
+                                <textarea formControlName="message" class="form-control" placeholder="Message"
+                                    id="floatingTextarea2" name="Message" style="height: 100px"></textarea>
+                                <label *ngIf="details.get('message')?.touched && details.get('message')?.errors">Please
+                                    type any
+                                    message</label>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary">Submit</button> <br>
+                                <p class="mt-5 mb-3 text-muted">© 2017-2020</p>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+.jumbotron
+      {
+          
+          margin-top: 5%;
+          margin-left: 20%;
+         
+          background:rgba(0,0,0,0.0001)
+          
+           
+      }
+     .background-image{
+        background: url("/assets/istock.jpg");
+        background-repeat: no-repeat;
+        background-size:100% 100%;
+        background-position:initial;
+
+     }
+     h1{
+         text-align: center;
+     }
+     label{
+         color: rgb(1, 14, 6);
+         text-transform: uppercase;
+         font-weight: bolder;
+     }
+     #p{
+         text-align: center;
+     }
+    #b{
+         text-align: center;
+     }
